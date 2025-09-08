@@ -1,0 +1,207 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  animation: fadeIn 0.6s ease-in-out; /* smooth load */
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: 700px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  animation: slideDown 0.8s ease;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  animation: fadeUp 0.8s ease;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.3s;
+  min-width: 0; /* prevents overflow */
+}
+
+.form input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 6px rgba(102, 126, 234, 0.6);
+}
+
+/* Buttons */
+.btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: #764ba2;
+  transform: scale(1.05); /* hover scale */
+  box-shadow: 0 6px 14px rgba(118, 75, 162, 0.4);
+}
+
+.btn:active {
+  transform: scale(0.97); /* click press */
+}
+
+/* Result Section */
+.result {
+  margin-top: 15px;
+  text-align: center;
+  word-break: break-word;
+  animation: fadeUp 0.7s ease;
+}
+
+.result a {
+  color: #667eea;
+  font-weight: bold;
+  word-break: break-all;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.result a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #667eea;
+  transition: width 0.3s ease;
+}
+
+.result a:hover {
+  color: #764ba2;
+}
+
+.result a:hover::after {
+  width: 100%;
+}
+
+/* Analytics */
+.analytics h2 {
+  margin-bottom: 15px;
+  text-align: center;
+  animation: slideDown 0.7s ease;
+}
+
+.analytics p {
+  margin-bottom: 8px;
+  font-size: 15px;
+  animation: fadeIn 0.8s ease;
+}
+
+.analytics ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .result {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .header h1 {
+    font-size: 22px;
+  }
+
+  .form input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .analytics p,
+  .analytics ul {
+    font-size: 13px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
