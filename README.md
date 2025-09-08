@@ -78,19 +78,6 @@ A simple and responsive **URL Shortener Application** built with **React.js**, f
 * Track **total clicks**.
 * View **click history** (timestamp + source).
 * Redirect handled via unique shortcodes.
-
----
-
-## 📸 Screenshots
-
-Add your screenshots in the `assets/` folder. Example:
-
-<img width="1898" height="899" alt="image" src="https://github.com/user-attachments/assets/897b4d86-2978-4ba6-b882-11f64eb93e1c" />
-
-
----
-
-
 ---
 
 ## 📌 Assumptions
